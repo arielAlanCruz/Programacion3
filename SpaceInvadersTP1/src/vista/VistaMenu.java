@@ -72,7 +72,8 @@ public class VistaMenu extends JPanel {
                         JOptionPane.showMessageDialog(VistaMenu.this, "Ingrese un número positivo.", "Error", JOptionPane.ERROR_MESSAGE);
                         return;
                     }
-                    controlador.getSistema().cargarCreditos(c);
+                    // through controller per UML
+                    controlador.cargarCreditos(c);
                     actualizarCreditos();
                     txtCargar.setText("");
                 } catch (NumberFormatException ex) {

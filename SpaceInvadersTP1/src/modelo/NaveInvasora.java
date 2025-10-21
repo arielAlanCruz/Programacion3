@@ -14,11 +14,16 @@ public class NaveInvasora {
 	}
 
 	public void mover(int direccion) {
-		posX += direccion * velocidad;
+		posX =posX+ direccion * velocidad;
 	}
 
 	public void bajar(int deltaY) {
 		posY += deltaY;
+	}
+
+	public Proyectil disparar() {
+		// proyectil enemigo hacia abajo
+		return new Proyectil(posX, posY + 10, 6, false);
 	}
 
 	public void recibirImpacto() {
